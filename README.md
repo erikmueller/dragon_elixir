@@ -25,7 +25,7 @@ To stay little longer, just specify the number of rounds with
 
 So there is this [kingdom](http://www.dragonsofmugloar.com/), right. With the princess. And every now and then a knight comes to look for the wench and take her (for whatever purpose). That's what we have dragons for.
 
-But you can't just take each and every dragon and throw him at the charging lad. We have to choose wisely. Moreover the weather is sometimes kind of nasty so it was recommended to check the weather forecast once in a while. This would of course be way too much effort to do alone. So we have some helpers with awesome tech to support our dayly knight-killing.
+But you can't just take each and every dragon and throw him at the charging lad. We have to choose wisely. Moreover the weather is sometimes kind of nasty so it was recommended to check the weather forecast once in a while. This would of course be way too much effort to do alone. So we have some helpers with awesome tech to support our daily knight-killing.
 
 ### It goes like this
 

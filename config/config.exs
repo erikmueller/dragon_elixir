@@ -5,4 +5,6 @@ use Mix.Config
 config :logger, :console,
   format: "$time $metadata[$level] $levelpad$message\n"
 
-config :dragon_elixir, base_url: "http://www.dragonsofmugloar.com"
+config :dragon_elixir,
+  communicator: DragonElixir.Communicator,
+  base_url: "http://www.dragonsofmugloar.com"

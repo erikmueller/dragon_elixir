@@ -1,5 +1,7 @@
 require Logger
 
+alias DragonElixir.Historian
+
 battles = case System.argv() do
   [count] -> String.to_integer(count)
   [] -> 10
@@ -7,19 +9,18 @@ end
 
 battle_results = for battle <- 1..battles do
   case DragonElixir.gulp() do
-    {:ok, %{"status" => status, "message" => message}} ->
-      Logger.warn "#{status} in battle ##{battle}! #{message}"
-      Logger.debug "+++\n"
-
-      status === "Victory"
     {:error, reason} ->
       Logger.error reason
 
       :unfair
+    {status, story} ->
+      Historian.write_down Enum.reverse(story)
+
+      status === :Victory
   end
 end
 
-# Maybe some were unfair because our dragon-API did not work
+# Battles with our dragon-API not working don't count
 valid_battles = Enum.filter(battle_results, &(&1 !== :unfair))
 # Get battles that were marked as victorious (`true`)
 battles_won = Enum.count(valid_battles, &(&1))

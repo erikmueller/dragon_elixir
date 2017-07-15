@@ -14,6 +14,14 @@ defmodule DragonElixir.Dragon do
     {"scaleThickness", 5},
     {"fireBreath", 0}
   ])
+
+  def spawn(:fog_dragon), do: DragonElixir.Dragon.spawn([
+    {"wingStrength", 0},
+    {"clawSharpness", 10},
+    {"scaleThickness", 0},
+    {"fireBreath", 10}
+  ])
+
   def spawn(stats) when is_list(stats) do
     # we need atom keys for contructing our dragon (`struct`)
     atomic_stats = for {k, v} <- stats, into: %{}, do: {String.to_atom(k), v}
