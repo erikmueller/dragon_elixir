@@ -25,7 +25,15 @@ valid_battles = Enum.filter(battle_results, &(&1 !== :unfair))
 battles_won = Enum.count(valid_battles, &(&1))
 
 # sum up
+ratio = battles_won / Enum.count(valid_battles)
+
 Logger.debug "==="
 Logger.info "There were #{Enum.count(valid_battles)} battles of which #{battles_won} were won by our lovely dragons."
-Logger.info "May the defeated #{(1 - battles_won / Enum.count(valid_battles)) * 100}% rest in Peace"
+
+statement = case ratio do
+  1.0 -> "Disclaimer: No dragons were harmed."
+  _ -> "#{ratio * 100}% of battles won! We'll get revenge for the defeated!"
+end
+
+Logger.info statement
 Logger.debug "===\n"
