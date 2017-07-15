@@ -8,11 +8,13 @@ end
 battle_results = for battle <- 1..battles do
   case DragonElixir.gulp() do
     {:ok, %{"status" => status, "message" => message}} ->
-      Logger.warn "#{status}! #{message}"
+      Logger.warn "#{status} in battle ##{battle}! #{message}"
       Logger.debug "+++\n"
 
       status === "Victory"
-    _ ->
+    {:error, reason} ->
+      Logger.error reason
+
       :unfair
   end
 end
