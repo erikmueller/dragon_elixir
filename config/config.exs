@@ -7,4 +7,7 @@ config :logger, :console,
 
 config :dragon_elixir,
   communicator: DragonElixir.Communicator,
+  dragon: DragonElixir.Dragon,
   base_url: "http://www.dragonsofmugloar.com"
+
+import_config "#{Mix.env}.exs"
