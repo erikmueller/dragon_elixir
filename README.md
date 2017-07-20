@@ -38,4 +38,11 @@ After all battles are fought we check what's left. Most of the time it should be
 
 ## Lookout
 
-Currently we have a dragon `testing` ground under construction to rip appart tin cans even better. Stay tuned.
+Currently we have a dragon `testing` ground under construction to rip appart tin cans even better. You can run
+
+```elixir
+mix test
+```
+
+to see what we acomplished so far.
+Stay tuned.
