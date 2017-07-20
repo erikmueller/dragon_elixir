@@ -7,7 +7,7 @@ battles = case System.argv() do
   [] -> 10
 end
 
-battle_results = for battle <- 1..battles do
+battle_results = for _ <- 1..battles do
   case DragonElixir.gulp() do
     {:error, reason} ->
       Logger.error reason

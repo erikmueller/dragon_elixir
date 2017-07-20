@@ -1,8 +1,6 @@
 defmodule DragonElixir.Trainer do
   require Logger
 
-  alias DragonElixir.WeatherService
-
   @lookup %{
     "agility" => "wingStrength",
     "armor" => "clawSharpness",

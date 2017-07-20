@@ -12,11 +12,12 @@ defmodule DragonElixir.Communicator.Sandbox do
     })}
   end
 
-  def ask("/valid/weather/normal"), do
-  def ask("/valid/weather/rain"), do
-  def ask("/valid/weather/dry"), do
-  def ask("/valid/weather/storm"), do
   def ask("/invalid/game"), do: {:error, "Test Error"}
+
+  def ask("/valid/weather/normal"), do: %{}
+  def ask("/valid/weather/rain", do: %{}
+  def ask("/valid/weather/dry", do: %{}
+  def ask("/valid/weather/storm", do: %{}
 
 
   #   case HTTPoison.get(@base_url <> url) do
